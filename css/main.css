@@ -1,0 +1,79 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.container {
+	display: flex;
+}
+
+
+.container>.col-md-6.col-lg-6 {
+	margin-right: 50px;
+}
+
+#table-infoStudents thead tr th {
+	position: relative;
+	cursor: pointer;
+}
+
+#table-infoStudents thead tr th.ai_th_sortable {
+	cursor: pointer;
+}
+
+#table-infoStudents thead tr th.ai_th_sortable::after {
+	float: right;
+}
+
+#table-infoStudents thead tr th.ai_th_sortable__up::after {
+	content: "▼";
+}
+
+#table-infoStudents thead tr th.ai_th_sortable__down::after {
+	content: "▲";
+}
+
+input[type='text'] {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+input[type='number'] {
+	width: 49%;
+	margin-bottom: 10px;
+}
+
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.title, .subTitle{
+	color: rgb(102, 46, 223);
+	/* margin-bottom: 5px; */
+	padding: 0;
+}
+
+.title{
+	color:blue;
+}

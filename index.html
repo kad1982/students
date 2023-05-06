@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Студенты</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+
+<body>
+	<h1 class="title">Студенты</h1>
+
+	<div class="container">
+		<div class="col-md-6 col-lg-6">
+			<h2 class="mb-3 subTitle">Форма добавления нового студента</h2>
+			<form class="needs-validation" novalidate="">
+				<div class="row">
+					<div class="col-sm-12 col-lg-12">
+						<div class="col-12 col-sm-12">
+							<label for="firstName" class="form-label">Имя</label>
+							<input type="text" class="form-control" id="firstName" placeholder="Имя" value="" required>
+							<div class="invalid-feedback">
+								Проверьте заполненность поля "Имя" студента
+							</div>
+						</div>
+
+						<div class="col-12 col-sm-12">
+							<label for="lastName" class="form-label">фамилия</label>
+							<input type="text" class="form-control" id="lastName" placeholder="фамилия" value="" required>
+							<div class="invalid-feedback">
+								Проверьте заполненность поля "Фамилия" студента
+							</div>
+						</div>
+
+						<div class="col-12 col-sm-12">
+							<label for="patronymic" class="form-label">отчество</label>
+							<input type="text" class="form-control" id="patronymic" placeholder="отчество" value="" required>
+							<div class="invalid-feedback">
+								Проверьте заполненность поля "Отчетво" студента
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6 col-sm-4">
+								<label for="dateOfBirth" class="form-label">дата рождения</label>
+								<input type="date" class="form-control" id="dateOfBirth" placeholder="дата рождения" value="" required>
+								<div class="invalid-feedback">
+									Проверьте заполненность поля "Дата рождения" студента и его валидность: дата рождения находится в
+									диапазоне от 01.01.1900 до текущей даты
+								</div>
+							</div>
+
+							<div class="col-6 col-sm-4">
+								<label for="yearBeginningTraining" class="form-label">год начала обучения</label>
+								<input type="number" class="form-control" id="yearBeginningTraining" placeholder="год начала обучения"
+									value="" required min="2000">
+								<div class="invalid-feedback">
+									Проверьте заполненность поля "Год начала обучения" студента и его валидность: год начала обучения
+									находится в диапазоне от 2000-го до текущего года
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-sm-12">
+							<label for="faculty" class="form-label">факультет</label>
+							<input type="text" class="form-control" id="faculty" placeholder="факультет" value="" required>
+							<div class="invalid-feedback">
+								Проверьте заполненность поля "факультет" студента
+							</div>
+						</div>
+
+
+						<div class="invalid-feedback all-text">
+
+
+						</div>
+						<hr>
+						<button class="w-100 btn btn-primary btn-lg" type="submit">Добавить студента</button>
+					</div>
+
+
+
+				</div>
+			</form>
+		</div>
+		<div class="col-sm-6 col-lg-6">
+			<div class="col-12 col-sm-12">
+				<h2 class="subTitle">Фильтры</h2>
+				<div class="flex">
+					<input id="txtFilterfio" type="text" placeholder="ФИО для поиска подстроки в фамилии, имени или отчестве">
+					<input id="txtFilterfac" type="text" placeholder="Факультет для поиска подстроки в названии факультета">
+					<input id="txtFilterStartYear" type="number" placeholder="Год начала обучения (точное совпадение)">
+					<input id="txtFilterEndYear" type="number" placeholder="Год окончания обучения (точное совпадение)">
+					<button class="w-100 btn btn-primary btn-lg" id="filter">Применить фильтры</button>
+				</div>
+
+				<div class="table-responsive">
+					<table class="table align-middle table-hover caption-top table_sort" id="table-infoStudents">
+						<caption>Информация об студентах</caption>
+						<thead class="table-primary">
+							<tr class="align-middle row-clickable" style="text-align:center">
+								<th>ФИО студента</th>
+								<th>Факультет</th>
+								<th class="sort_date">Дата рождения и возраст</th>
+								<th class="sort_firstYear">Годы обучения и номер курса</th>
+							</tr>
+						</thead>
+						<tbody id="infoStudents">
+
+
+						</tbody>
+
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script defer src="js/main.js"></script>
+
+
+</body>
+
+</html>
